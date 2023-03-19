@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <title>Yummy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9e51e55f56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black">
+<div class="sideNav position-fixed  text-white h-100 d-flex me-5 z-1">
+    <div class="p-3 firstNavbar d-flex flex-column bg-black justify-content-between h-100">
+      <ul class="ulItems list-unstyled position-relative">
+        <li class="searchLI nav-link position-absolute" data-target="#search">Search</li>
+        <li class="categ nav-link position-absolute" data-target="#cate">Categories</li>
+        <li class="areaLi nav-link position-absolute" data-target="#area">Area</li>
+        <li class="ingreLi nav-link position-absolute" data-target="#ingre">Ingredients</li>
+        <li class="contactLi nav-link position-absolute" data-target="#contact">Contact Us</li>
+      </ul>
+
+
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
+            <a href="#"><i class="fa-solid fa-globe text-white"></i></a>
+            <p>Copyright@ <span class="text-primary">Maher Elgammal</span> 2023 All Rights Reserved.</p>
+        </div>
+    </div>
+    <div class="minNav bg-white d-flex flex-column justify-content-between text-center px-0 py-3">
+        <div class="logo-img">
+            <img src="images/logo.png" alt="" class="w-100">
+        </div>
+        <div class="">
+            <i class="fa-solid fa-x text-black fs-2 d-none doorCloser"></i>
+            <i class="fa-solid fa-bars text-black fs-2 doorOpener "></i>
+        </div>
+        <div class="shareIcon d-flex flex-column pb-3">
+            <a href="#"><i class="fa-solid fa-globe text-black p-1"></i></a>
+            <a href="#"><i class="fa-solid fa-share-nodes text-black p-1"></i></i></a>
+        </div>
+    </div>
+    
+</div>
+<div id="spinner" class="spinner-border text-primary top-50 start-50 position-absolute" role="status">
+  <img class="visually-hidden">Loading...</img>
+</div>
+<div class="main-page container m-auto">
+    <div id="search" class="section search container py-5 d-none">
+        <div class="inputs d-flex text-white">
+            <input type="text" name="searchByName" id="SbyN" placeholder="Search By Name" class="text-info form-control w-50 py-2 px-4 mx-3 bg-transparent">
+            <input type="text" name="searchByName" id="SbyFL" placeholder="Search By First Letter" class="text-info form-control w-50 py-2 px-4 bg-transparent">
+        </div>
+        <div id="searchResult" class="row gy-5 py-5 container">
+        </div>
+    </div>
+    <div id="searchDetails" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="main" class="section row gy-5 py-5 container">
+    </div>
+    <div id="details" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="cate" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="cateDetails" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="clickedCateDetails" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="area" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="areaMeals" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="areaMealsDetails" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="ingre" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="ingreMeals" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="ingreMealsDetails" class="section row gy-5 py-5 container d-none">
+    </div>
+    <div id="contact" class="section container py-5 d-none">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="text" class="py-2 px-2 form-control" id="name" placeholder="Enter your name" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="email" class="py-2 px-2 form-control" id="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="tel" class="py-2 px-2 form-control" id="phone" placeholder="Enter your phone number" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="number" class="py-2 px-2 form-control" id="age" placeholder="Enter your age" min="18" max="120" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="password" class="py-2 px-2 form-control" id="password" placeholder="Enter a password" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+            <div class="col-md-5 m-auto mb-2">
+              <div class="input-group">
+                <input type="password" class="py-2 px-2 form-control" id="confirm-password" placeholder="Confirm your password" required>
+                <div class="invalid-feedback" style="display: inline;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3 justify-content-center">
+            <div class="col-md-6 text-center">
+              <button type="submit" class="btn btn-outline-danger px-4" id="submit" disabled>Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>
+
+
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+ul li{
+    padding: 10px !important;
+    cursor: pointer;
+    top: 100%;
+}
+ul{
+    height: 90%;
+}
+.sideNav{
+    position: fixed;
+    left: -250px;
+    transition: all .5s;
+}
+.firstNavbar{
+    width:250px;
+    padding: 0;
+}
+.minNav{
+    width: 50px ;
+}
+.fa-bars, .fa-x{
+    cursor: pointer;
+}
+.layer{
+    top: 100%;
+    background: rgba(255, 255, 255, 0.786) !important;
+    transition: all .5s;
+    cursor: pointer;
+}
+.hover{
+    top: 0;
+    transition: all .5s;
+}
+.cartona:hover .layer{
+    top: 0;
+}
+.ingr p{
+    display: inline-block;
+    width: fit-content;
+    background-color: white;
+}
+
+p:blank {
+    /* styling for empty <p> elements */
+    content: ""; /* remove content */
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+}
+#tags{
+    width: fit-content;
+    background-color: rgb(214, 246, 162) !important;
+}
+.closeDiv{
+    right: 150px;
+    top: 50px;
+}
+.closeSearch{
+    right: 50px;
+    top: 55px;
+    cursor: pointer;
+}
+.searchCloser{
+    right: 150px;
+    top: 55px;
+    cursor: pointer;
+}
+input::placeholder {
+    color: rgb(199, 199, 199) !important;
+}
+#contact input {
+    width: 40% !important;
+}
+#contact input::placeholder {
+    color: rgb(88, 87, 87) !important;
+}
+.area-icons, .ingre-icons{
+    cursor: pointer;
+}
+.ingre-desc{
+    height: 7.5rem !important;
+    overflow: hidden;
+}
+.sendMessage{
+    margin-left: 200px !important;
+}
